@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+			width: 360px;
+			border: 3px solid #f00;
+			margin: auto;
+		}
+
+		.box div{
+			width: 100px;
+			height: 100px;
+			background-color: #ccc;
+			margin: 10px;
+			float: left;
+		}
+		.box:after{
+			content: " ";
+			display: block;
+			width: 100px;
+			height: 0px;
+
+			background-color: #aaa;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</body>
+</html>
