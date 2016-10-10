@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<style type="text/css">
+		body{
+			height: 3000px;
+		}
+		div{
+			height: 300px;
+			width: 300px;
+			background-color: #0f0;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			margin: auto;
+			display: none;
+
+		}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			$(window).scroll(function(){
+				var tt = $(window).scrollTop()
+				console.log('is ' + tt);
+				if(tt > 2000){
+					$('.ad').stop(true, false).fadeIn();
+				}	
+			})
+			$('.ad a').click(function(){
+				$(this).parent().fadeOut();
+				return false;	
+			})
+		})
+
+	</script>
+</head>
+<body>
+	<div class="ad">
+		<a href="#">close</a>
+	</div>
+</body>
+</html>

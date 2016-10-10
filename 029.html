@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			position: relative;
+			background-color: #aaa;
+			margin: 100px auto;
+		}
+	</style>
+	
+	<script type="text/javascript">
+		$(function(){
+			var ww = 0;
+			var vv = 0;
+
+			$(window).keydown(function(e){
+				if(e.keyCode == 37){
+					$('div').css({left: ww-=5})
+				}
+				if(e.keyCode == 38){
+					$('div').css({top: vv-=5})
+				}
+				if(e.keyCode == 39){
+					$('div').css({left: ww+=5})
+				}
+				if(e.keyCode == 40){
+					$('div').css({top: vv+=5})
+				}
+			})
+		})
+	</script>
+	
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+
+</head>
+<body>
+	<div></div>
+</body>
+</html>

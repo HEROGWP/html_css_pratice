@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<style type="text/css">
+		.big{
+			height: 300px;
+			width: 600px;
+			position: relative;
+			margin-bottom: 50px;
+		}
+		.big img{
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			var _index = 0;
+			var $b_img = $('.big img')
+			var img_count = $b_img.length;
+			$b_img.eq(_index).show();
+
+			for(var i=0; i<img_count; i++){
+				$('.small').append('<a href="#">' + i + '</a>');
+			}
+
+			$('.small a').click(function(){
+				
+				$b_img.eq(_index).fadeOut();
+
+				_index = $(this).index();
+
+				$b_img.eq(_index).fadeIn();
+			})
+		})
+	</script>
+
+</head>
+<body>
+	<div class="big">
+		<img src="https://api.fnkr.net/testimg/600x300/0071B2/FFF/?text=A">
+		<img src="https://api.fnkr.net/testimg/600x300/00CED1/FFF/?text=B">
+		<img src="https://api.fnkr.net/testimg/600x300/DC343D/FFF/?text=C">
+		<img src="https://api.fnkr.net/testimg/600x300/FFD12B/FFF/?text=D">
+
+	</div>
+
+	<div class="small">
+
+
+		
+	</div>
+</body>
+</html>

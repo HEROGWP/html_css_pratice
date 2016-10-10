@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$.getJSON('obj.json', function(data){
+				$('.box img').attr('src', data[2].picSrc);
+				$('.box p').html(data[2].picName);		
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="box">
+		<img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
+		<p>pic</p>
+	</div>
+</body>
+</html>

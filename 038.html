@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	
+	<style type="text/css">
+		div{
+			border: 5px solid #f00;
+			padding: 50px;
+			background-color: #fff;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		$(function(){
+			$('.aa').click(function(){
+				$(this).children().css({'background-color':'#0ff'});
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="aa">
+		<div class="bb">
+			<div class="cc"></div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<style type="text/css">
+		header{
+			height: 300px;
+		}
+
+		body{
+			height: 4000px;
+		}
+		.navbar{
+			width: 100%;
+			left: 0;
+			top: 0;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			var navTop = $('.navbar').offset().top;
+			$(window).scroll(function(){
+				var tt = $(this).scrollTop();
+				if(tt >= navTop){
+					$('.navbar').css({'position':'fixed'})
+				}else{
+					$('.navbar').css({'position':'relative'})
+				}
+			})	
+		})
+	</script>
+</head>
+<body>
+
+	<header></header>
+	<nav class="navbar navbar-default" role="navigation">
+		<!-- logo區 -->
+		<a class="navbar-brand" href="#">CSS可樂</a>
+	
+		<!-- 左選單 -->
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#">關於CSS可樂</a></li>
+			<li><a href="#">CSS教學</a></li>
+			<li><a href="#">CSS範例</a></li>
+			<li><a href="#">原創CSS</a></li>
+		</ul>
+	
+		<!-- 搜尋表單 -->
+		<form class="navbar-form navbar-left" role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="請輸入關鍵字">
+			</div>
+			<button type="submit" class="btn btn-default">搜尋</button>
+		</form>
+	
+		<!-- 右選單 -->
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#">Amos 您好</a></li>
+			<li><a href="#">登出</a></li>
+			<li><a href="#">個人設定</a></li>
+			<!-- 下拉選單 -->
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">繁體中文 <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">繁體中文</a></li>
+					<li><a href="#">English</a></li>
+					<li><a href="#">日本語</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</body>
+</html>

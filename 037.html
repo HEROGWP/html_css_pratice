@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	
+	<style type="text/css">
+		.dock{
+			text-align: center;
+		}
+
+		.dock li{
+			vertical-align: top;
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			overflow: hidden;
+			transition: .3s;
+		}
+
+		.dock li img{
+			width: 100%;
+		}
+
+		.dock li.now{
+			width: 100px;
+			height: 100px;
+		}
+
+		.dock li.sec{
+			width: 75px;
+			height: 75px;
+		}
+	</style>
+	
+	<script type="text/javascript">
+		$(function(){
+			$('.dock li').hover(function(){
+				$(this).siblings().removeClass();
+				$(this).addClass('now')
+				$(this).prev().addClass('sec');
+				$(this).next().addClass('sec');
+			},function(){
+					$('.dock .now, .dock .sec').removeClass();
+				}
+			)
+		})
+	</script>
+</head>
+<body>
+	<div class="dock">
+		<ul>
+			<li><img src="https://api.fnkr.net/testimg/100x100/00CED1/FFF/?text=img+placeholder"></li>
+			<li><img src="https://api.fnkr.net/testimg/100x100/00CED1/FFF/?text=img+placeholder"></li>
+			<li><img src="https://api.fnkr.net/testimg/100x100/00CED1/FFF/?text=img+placeholder"></li>
+			<li><img src="https://api.fnkr.net/testimg/100x100/00CED1/FFF/?text=img+placeholder"></li>
+			<li><img src="https://api.fnkr.net/testimg/100x100/00CED1/FFF/?text=img+placeholder"></li>
+			<li><img src="https://api.fnkr.net/testimg/100x100/00CED1/FFF/?text=img+placeholder"></li>
+			<li><img src="https://api.fnkr.net/testimg/100x100/00CED1/FFF/?text=img+placeholder"></li>
+			<li><img src="https://api.fnkr.net/testimg/100x100/00CED1/FFF/?text=img+placeholder"></li>
+			<li><img src="https://api.fnkr.net/testimg/100x100/00CED1/FFF/?text=img+placeholder"></li>
+			<li><img src="https://api.fnkr.net/testimg/100x100/00CED1/FFF/?text=img+placeholder"></li>
+		</ul>
+	</div>
+</body>
+</html>
